@@ -1,7 +1,7 @@
 const housesContainer = document.querySelector('#houses-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4004/api/houses`
+const baseURL = `http://localhost:4040/api/houses`
 
 const housesCallback = ({ data: houses }) => displayHouses(houses)
 const errCallback = err => console.log(err)
@@ -38,7 +38,8 @@ function createHouseCard(house) {
     const houseCard = document.createElement('div')
     houseCard.classList.add('house-card')
 
-    houseCard.innerHTML = `<img alt='house cover image' src=${house.imageURL} class="house-cover-image"/>
+    houseCard.innerHTML = 
+    `<img alt='house cover image' src=${house.imageURL} class="house-cover-image"/>
     <p class="name">${house.name}</p>
     <p class="address">${house.address}</p>
     <div class="btns-container">
